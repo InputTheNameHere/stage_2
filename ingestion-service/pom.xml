@@ -41,6 +41,11 @@
                 <version>3.11.0</version>
                 <configuration>
                     <release>${maven.compiler.release}</release>
+                    <archive>
+                        <manifest>
+                            <mainClass>org.ulpgc.bd.IngestionServiceApp</mainClass>
+                        </manifest>
+                    </archive>
                 </configuration>
             </plugin>
 
