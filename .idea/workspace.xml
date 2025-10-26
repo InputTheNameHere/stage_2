@@ -4,15 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="afc3a655-f9fb-40fe-89b1-bf6d48c3eeee" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/search-service/src/main/java/org/ulpgc/bd/search/api/SearchHttpApi.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/search-service/src/main/java/org/ulpgc/bd/search/model/SearchResult.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/search-service/src/main/java/org/ulpgc/bd/search/service/SearchService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="afc3a655-f9fb-40fe-89b1-bf6d48c3eeee" name="Changes" comment="implement initial search API structure with mock responses">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/search-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/search-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/search-service/src/main/java/com/example/service/SearchServiceApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/search-service/src/main/java/org/ulpgc/bd/search/SearchServiceApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/search-service/src/main/java/org/ulpgc/bd/search/SearchServiceApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/search-service/src/main/java/org/ulpgc/bd/search/SearchServiceApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/search-service/src/main/java/org/ulpgc/bd/search/api/SearchHttpApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/search-service/src/main/java/org/ulpgc/bd/search/api/SearchHttpApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/search-service/src/main/java/org/ulpgc/bd/search/service/SearchService.java" beforeDir="false" afterPath="$PROJECT_DIR$/search-service/src/main/java/org/ulpgc/bd/search/service/SearchService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +30,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.Indexing.executor": "Run",
     "Application.Ingestion.executor": "Run",
     "Application.Search.executor": "Run",
     "Maven.indexing-service [package].executor": "Run",
@@ -94,12 +92,36 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1761484975858</updated>
-      <workItem from="1761484979111" duration="612000" />
+      <workItem from="1761484979111" duration="8758000" />
     </task>
+    <task id="LOCAL-00001" summary="implement initial search API structure with mock responses">
+      <option name="closed" value="true" />
+      <created>1761485680879</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1761485680879</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="implement initial search API structure with mock responses" />
+    <option name="LAST_COMMIT_MESSAGE" value="implement initial search API structure with mock responses" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

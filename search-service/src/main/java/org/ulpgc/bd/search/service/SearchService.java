@@ -1,29 +1,54 @@
 package org.ulpgc.bd.search.service;
 
-import org.ulpgc.bd.search.model.SearchResult;
-
-import java.util.List;
+import com.google.gson.*;
+import java.io.IOException;
+import java.net.URI;
+import java.net.http.*;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class SearchService {
 
-    private final List<SearchResult> allBooks = List.of(
-            new SearchResult(5, "Robinson Crusoe", "Daniel Defoe", "en", 1719),
-            new SearchResult(1342, "Pride and Prejudice", "Jane Austen", "en", 1813),
-            new SearchResult(158, "Emma", "Jane Austen", "en", 1815),
-            new SearchResult(201, "Sense and Sensibility", "Jane Austen", "en", 1811),
-            new SearchResult(6500, "Les Misérables", "Victor Hugo", "fr", 1862),
-            new SearchResult(4201, "Vingt mille lieues sous les mers", "Jules Verne", "fr", 1870),
-            new SearchResult(11, "Alice’s Adventures in Wonderland", "Lewis Carroll", "en", 1865),
-            new SearchResult(12, "De la Terre à la Lune", "Jules Verne", "fr", 1865)
-    );
+    private static final String INDEX_STATUS_URL = "http://localhost:7002/index/status";
+    private static final Gson gson = new Gson();
 
-    public List<SearchResult> search(String term, String author, String language, Integer year) {
-        return allBooks.stream()
-                .filter(b -> term.isEmpty() || b.title.toLowerCase().contains(term.toLowerCase()))
-                .filter(b -> author == null || b.author.equalsIgnoreCase(author))
-                .filter(b -> language == null || b.language.equalsIgnoreCase(language))
-                .filter(b -> year == null || b.year == year)
-                .collect(Collectors.toList());
+    public static List<Map<String, Object>> search(String q, String author, String language, String year) {
+        try {
+
+            HttpClient client = HttpClient.newHttpClient();
+            HttpRequest request = HttpRequest.newBuilder()
+                    .uri(URI.create(INDEX_STATUS_URL))
+                    .GET()
+                    .build();
+
+            HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
+            if (response.statusCode() != 200) {
+                System.err.println("SearchService: Index service unavailable (" + response.statusCode() + ")");
+                return List.of();
+            }
+
+            Map<String, Object> status = gson.fromJson(response.body(), Map.class);
+
+            if (!status.containsKey("books")) {
+                System.err.println("SearchService: No 'books' field found in index/status response");
+                return List.of();
+            }
+
+            List<Map<String, Object>> indexedBooks = (List<Map<String, Object>>) status.get("books");
+
+            return indexedBooks.stream()
+                    .filter(b -> q == null || b.get("title").toString().toLowerCase().contains(q.toLowerCase()))
+                    .filter(b -> author == null || author.equalsIgnoreCase((String) b.get("author")))
+                    .filter(b -> language == null || language.equalsIgnoreCase((String) b.get("language")))
+                    .filter(b -> year == null || year.equals(String.valueOf(b.get("year"))))
+                    .collect(Collectors.toList());
+
+        } catch (IOException | InterruptedException e) {
+            System.err.println("SearchService: Error communicating with Index Service - " + e.getMessage());
+            return List.of();
+        } catch (Exception e) {
+            System.err.println("SearchService: Unexpected error - " + e);
+            return List.of();
+        }
     }
 }
