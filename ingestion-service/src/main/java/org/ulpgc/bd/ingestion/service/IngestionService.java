@@ -39,6 +39,7 @@ public class IngestionService {
 
     public Map<String, Object> ingest(int bookId) {
         Map<String, Object> response = new LinkedHashMap<>();
+        long t0 = System.nanoTime();
         try {
             String date = LocalDate.now().format(DateTimeFormatter.BASIC_ISO_DATE);
             String hour = String.format("%02d", LocalTime.now().getHour());
@@ -48,11 +49,13 @@ public class IngestionService {
             URL url = downloader.findGutenbergTextURL(bookId);
             if (url == null) throw new IOException("No accessible plain-text URL found for bookId " + bookId);
 
-            String text = downloader.fetchText(url);
+            long t1 = System.nanoTime();
+            HttpDownloader.FetchResult fr = downloader.fetchTextWithInfo(url);
+            long t2 = System.nanoTime();
 
-            GutenbergSplitter.Markers markers = splitter.findMarkers(text);
-            String body = splitter.sliceBody(text, markers);
-            Meta meta = extractor.extract(text, markers);
+            GutenbergSplitter.Markers markers = splitter.findMarkers(fr.text);
+            String body = splitter.sliceBody(fr.text, markers);
+            Meta meta = extractor.extract(fr.text, markers);
 
             Path headerPath = dir.resolve(bookId + "_header.txt");
             Path bodyPath = dir.resolve(bookId + "_body.txt");
@@ -68,10 +71,20 @@ public class IngestionService {
 
             persistMetaJson(dir, bookId, meta, url.toString(), sha256, parserVersion);
 
+            long t3 = System.nanoTime();
+            long resolveMs = (t1 - t0) / 1_000_000L;
+            long downloadMs = (t2 - t1) / 1_000_000L;
+            long parseMs = (t3 - t2) / 1_000_000L;
+
             response.put("book_id", bookId);
             response.put("status", "downloaded");
             response.put("path", dir.toString());
             response.put("source_url", url.toString());
+            response.put("http_status", fr.status);
+            response.put("size_bytes", fr.sizeBytes);
+            response.put("resolve_ms", resolveMs);
+            response.put("download_ms", downloadMs);
+            response.put("parse_ms", parseMs);
             response.put("title", meta.title);
             response.put("author", meta.author);
             response.put("language", meta.language);
@@ -168,6 +181,7 @@ public class IngestionService {
     }
 
     private static void writeAtomic(Path target, String content) throws IOException {
+        Files.createDirectories(target.getParent());
         Path tmp = target.resolveSibling(target.getFileName().toString() + ".tmp");
         Files.writeString(tmp, content, StandardOpenOption.CREATE, StandardOpenOption.TRUNCATE_EXISTING, StandardOpenOption.WRITE);
         Files.move(tmp, target, StandardCopyOption.REPLACE_EXISTING, StandardCopyOption.ATOMIC_MOVE);
