@@ -1,4 +1,4 @@
-package com.example.service;
+package org.ulpgc.bd;
 
 import io.javalin.Javalin;
 import io.javalin.http.Context;
