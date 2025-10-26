@@ -1,126 +1,48 @@
 package org.ulpgc.bd.ingestion;
 
-import com.sun.net.httpserver.HttpServer;
-import com.sun.net.httpserver.HttpExchange;
-import java.io.*;
-import java.net.InetSocketAddress;
-import java.net.URL;
-import java.nio.file.*;
-import java.time.LocalDate;
-import java.util.*;
+import io.javalin.Javalin;
+import io.javalin.json.JavalinGson;
+import org.ulpgc.bd.ingestion.api.IngestionHttpApi;
+import org.ulpgc.bd.ingestion.io.HttpDownloader;
+import org.ulpgc.bd.ingestion.parser.GutenbergMetaExtractor;
+import org.ulpgc.bd.ingestion.parser.GutenbergSplitter;
+import org.ulpgc.bd.ingestion.service.IngestionService;
+
+import java.net.URI;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 
 public class IngestionServiceApp {
 
-    private static final Path DATALAKE_PATH = Paths.get("datalake");
+    public static void main(String[] args) {
+        int port = 7001;
+        Path moduleRoot = detectModuleRoot(IngestionServiceApp.class);
+        Path datalake = moduleRoot.resolve("datalake").toAbsolutePath().normalize();
+        String parserVersion = "gutenberg-heuristics-8";
 
-    public static void main(String[] args) throws IOException {
-        HttpServer server = HttpServer.create(new InetSocketAddress(7001), 0);
+        HttpDownloader downloader = new HttpDownloader("IngestionService/1.0 (+mailto:adrian.budzich101@alu.ulpgc.es)", 6000, 10000);
+        GutenbergSplitter splitter = new GutenbergSplitter();
+        GutenbergMetaExtractor extractor = new GutenbergMetaExtractor();
+        IngestionService service = new IngestionService(datalake, parserVersion, downloader, splitter, extractor);
 
-        server.createContext("/ingest", exchange -> {
-            String path = exchange.getRequestURI().getPath();
-            String[] parts = path.split("/");
-            if (parts.length == 3 && exchange.getRequestMethod().equalsIgnoreCase("POST")) {
-                int bookId = Integer.parseInt(parts[2]);
-                Map<String, Object> result = downloadBook(bookId);
-                sendJson(exchange, result);
-            } else if (parts.length == 4 && parts[2].equals("status") && exchange.getRequestMethod().equalsIgnoreCase("GET")) {
-                int bookId = Integer.parseInt(parts[3]);
-                Map<String, Object> result = checkStatus(bookId);
-                sendJson(exchange, result);
-            } else if (parts.length == 3 && parts[2].equals("list") && exchange.getRequestMethod().equalsIgnoreCase("GET")) {
-                Map<String, Object> result = listBooks();
-                sendJson(exchange, result);
-            } else {
-                sendJson(exchange, Map.of("error", "Invalid endpoint or method"));
-            }
-        });
-
-        server.start();
+        Javalin app = Javalin.create(cfg -> cfg.jsonMapper(new JavalinGson())).start(port);
+        IngestionHttpApi.register(app, service);
+        System.out.println("Ingestion listening on :" + port + " datalake=" + datalake);
     }
 
-    private static Map<String, Object> downloadBook(int bookId) {
-        Map<String, Object> response = new LinkedHashMap<>();
+    private static Path detectModuleRoot(Class<?> anchor) {
         try {
-            String today = LocalDate.now().toString().replace("-", "");
-            Path dir = DATALAKE_PATH.resolve(today).resolve(String.valueOf(bookId));
-            Files.createDirectories(dir);
-
-            String url = "https://www.gutenberg.org/files/" + bookId + "/" + bookId + "-0.txt";
-            Path filePath = dir.resolve(bookId + ".txt");
-
-            try (InputStream in = new URL(url).openStream()) {
-                Files.copy(in, filePath, StandardCopyOption.REPLACE_EXISTING);
-            }
-
-            response.put("book_id", bookId);
-            response.put("status", "downloaded");
-            response.put("path", filePath.toString());
+            URI uri = anchor.getProtectionDomain().getCodeSource().getLocation().toURI();
+            Path p = Paths.get(uri);
+            if (Files.isRegularFile(p)) p = p.getParent();
+            String name = p.getFileName() != null ? p.getFileName().toString() : "";
+            if (name.equals("classes") || name.equals("test-classes")) p = p.getParent();
+            name = p.getFileName() != null ? p.getFileName().toString() : "";
+            if (name.equals("target") || name.equals("build")) p = p.getParent();
+            return p.toAbsolutePath().normalize();
         } catch (Exception e) {
-            response.put("book_id", bookId);
-            response.put("status", "error");
-            response.put("message", e.getMessage());
-        }
-        return response;
-    }
-
-    private static Map<String, Object> checkStatus(int bookId) {
-        Map<String, Object> response = new LinkedHashMap<>();
-        try {
-            boolean found = Files.walk(DATALAKE_PATH)
-                    .anyMatch(path -> path.getFileName().toString().equals(bookId + ".txt"));
-            response.put("book_id", bookId);
-            response.put("status", found ? "available" : "not found");
-        } catch (IOException e) {
-            response.put("status", "error");
-            response.put("message", e.getMessage());
-        }
-        return response;
-    }
-
-    private static Map<String, Object> listBooks() {
-        Map<String, Object> response = new LinkedHashMap<>();
-        List<Integer> ids = new ArrayList<>();
-        try {
-            if (Files.exists(DATALAKE_PATH)) {
-                Files.walk(DATALAKE_PATH)
-                        .filter(path -> path.toString().endsWith(".txt"))
-                        .forEach(path -> {
-                            try {
-                                ids.add(Integer.parseInt(path.getFileName().toString().replace(".txt", "")));
-                            } catch (NumberFormatException ignored) {}
-                        });
-            }
-            response.put("count", ids.size());
-            response.put("books", ids);
-        } catch (IOException e) {
-            response.put("status", "error");
-            response.put("message", e.getMessage());
-        }
-        return response;
-    }
-
-    private static void sendJson(HttpExchange exchange, Map<String, Object> data) throws IOException {
-        StringBuilder json = new StringBuilder("{");
-        Iterator<Map.Entry<String, Object>> it = data.entrySet().iterator();
-        while (it.hasNext()) {
-            Map.Entry<String, Object> entry = it.next();
-            json.append("\"").append(entry.getKey()).append("\": ");
-            Object value = entry.getValue();
-            if (value instanceof Number || value instanceof Boolean) {
-                json.append(value);
-            } else {
-                json.append("\"").append(value).append("\"");
-            }
-            if (it.hasNext()) {
-                json.append(", ");
-            }
-        }
-        json.append("}");
-        byte[] response = json.toString().getBytes();
-        exchange.getResponseHeaders().add("Content-Type", "application/json");
-        exchange.sendResponseHeaders(200, response.length);
-        try (OutputStream os = exchange.getResponseBody()) {
-            os.write(response);
+            return Paths.get(".").toAbsolutePath().normalize();
         }
     }
 }
