@@ -5,24 +5,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="afc3a655-f9fb-40fe-89b1-bf6d48c3eeee" name="Changes" comment="implement initial search API structure with mock responses">
+      <change afterPath="$PROJECT_DIR$/control-service/src/main/java/org/ulpgc/bd/control/ControlService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/search-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/search-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/search-service/src/main/java/org/ulpgc/bd/search/SearchServiceApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/search-service/src/main/java/org/ulpgc/bd/search/SearchServiceApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/search-service/src/main/java/org/ulpgc/bd/search/api/SearchHttpApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/search-service/src/main/java/org/ulpgc/bd/search/api/SearchHttpApi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/search-service/src/main/java/org/ulpgc/bd/search/service/SearchService.java" beforeDir="false" afterPath="$PROJECT_DIR$/search-service/src/main/java/org/ulpgc/bd/search/service/SearchService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/control-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/control-service/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 4
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 4
+}</component>
   <component name="ProjectId" id="34baxCo3ALru0xZg0mdgHi8wBxb" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -30,14 +37,16 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.ControlService.executor": "Run",
     "Application.Indexing.executor": "Run",
     "Application.Ingestion.executor": "Run",
     "Application.Search.executor": "Run",
+    "Maven.control-service [package].executor": "Run",
     "Maven.indexing-service [package].executor": "Run",
     "Maven.ingestion-service [package].executor": "Run",
     "Maven.search-service [package].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "feature/search-service",
+    "git-widget-placeholder": "feature/control",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "node.js.detected.package.eslint": "true",
@@ -93,6 +102,7 @@
       <option name="presentableId" value="Default" />
       <updated>1761484975858</updated>
       <workItem from="1761484979111" duration="8758000" />
+      <workItem from="1761736553848" duration="4636000" />
     </task>
     <task id="LOCAL-00001" summary="implement initial search API structure with mock responses">
       <option name="closed" value="true" />
