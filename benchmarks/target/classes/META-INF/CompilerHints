@@ -1,0 +1,12 @@
+dontinline,*.*_all_jmhStub
+dontinline,*.*_avgt_jmhStub
+dontinline,*.*_sample_jmhStub
+dontinline,*.*_ss_jmhStub
+dontinline,*.*_thrpt_jmhStub
+inline,com/example/benchmark/InvertedIndexBench$Docs.setup
+inline,com/example/benchmark/InvertedIndexBench.build_index
+inline,com/example/benchmark/InvertedIndexBench.lookup_topfreq
+inline,com/example/benchmark/MetadataParsingBench$Headers.setup
+inline,com/example/benchmark/MetadataParsingBench.parse_header
+inline,com/example/benchmark/TokenizationBench$Data.setup
+inline,com/example/benchmark/TokenizationBench.tokenize_simple
