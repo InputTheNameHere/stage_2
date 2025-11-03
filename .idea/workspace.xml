@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ca87c316-1471-4fb3-9698-8f1b935c1c77" name="Changes" comment="" />
+    <list default="true" id="afc3a655-f9fb-40fe-89b1-bf6d48c3eeee" name="Changes" comment="implement initial search API structure with mock responses">
+      <change afterPath="$PROJECT_DIR$/control-service/src/main/java/org/ulpgc/bd/control/ControlService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/control-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/control-service/pom.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,57 +19,34 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
-    <favorite-branches>
-      <branch-storage>
-        <map>
-          <entry type="LOCAL">
-            <value>
-              <list>
-                <branch-info repo="$PROJECT_DIR$" source="develop" />
-              </list>
-            </value>
-          </entry>
-        </map>
-      </branch-storage>
-    </favorite-branches>
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$" value="develop" />
-      </map>
-    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory">{
-  &quot;lastFilter&quot;: {
-    &quot;state&quot;: &quot;OPEN&quot;,
-    &quot;assignee&quot;: &quot;angelalpzdor&quot;
-  }
-}</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/InputTheNameHere/stage_2.git&quot;,
-    &quot;accountId&quot;: &quot;930a76ee-f8ed-4650-af56-7e4cb0e994d2&quot;
-  }
-}</component>
   <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 4
 }</component>
-  <component name="ProjectId" id="34WVK46xHcofJxwNZMxKfXwM6i7" />
+  <component name="ProjectId" id="34baxCo3ALru0xZg0mdgHi8wBxb" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Application.ControlService.executor": "Run",
+    "Application.Indexing.executor": "Run",
+    "Application.Ingestion.executor": "Run",
+    "Application.Search.executor": "Run",
+    "Maven.control-service [package].executor": "Run",
+    "Maven.indexing-service [package].executor": "Run",
+    "Maven.ingestion-service [package].executor": "Run",
+    "Maven.search-service [package].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "feature/control",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "node.js.detected.package.eslint": "true",
@@ -74,24 +57,62 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RunManager" selected="Application.Search">
+    <configuration name="Indexing" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="org.ulpgc.bd.indexing.IndexingServiceApp" />
+      <module name="indexing-service" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Ingestion" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="org.ulpgc.bd.ingestion.IngestionServiceApp" />
+      <module name="ingestion-service" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Search" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="org.ulpgc.bd.search.SearchServiceApp" />
+      <module name="search-service" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Ingestion" />
+      <item itemvalue="Application.Indexing" />
+      <item itemvalue="Application.Search" />
+    </list>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.26199.169" />
-        <option value="bundled-js-predefined-d6986cc7102b-9c94529fcfe0-JavaScript-IU-252.26199.169" />
+        <option value="bundled-jdk-9823dce3aa75-b114ca120d71-intellij.indexing.shared.core-IU-242.21829.142" />
+        <option value="bundled-js-predefined-d6986cc7102b-7c0b70fcd90d-JavaScript-IU-242.21829.142" />
       </set>
     </attachedChunks>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="ca87c316-1471-4fb3-9698-8f1b935c1c77" name="Changes" comment="" />
-      <created>1761329247791</created>
+      <changelist id="afc3a655-f9fb-40fe-89b1-bf6d48c3eeee" name="Changes" comment="" />
+      <created>1761484975858</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1761329247791</updated>
-      <workItem from="1761329249605" duration="7573000" />
-      <workItem from="1761348535841" duration="1069000" />
+      <updated>1761484975858</updated>
+      <workItem from="1761484979111" duration="8758000" />
+      <workItem from="1761736553848" duration="4636000" />
     </task>
+    <task id="LOCAL-00001" summary="implement initial search API structure with mock responses">
+      <option name="closed" value="true" />
+      <created>1761485680879</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1761485680879</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -102,22 +123,29 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="origin/feature/ingestion-service" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="implement initial search API structure with mock responses" />
+    <option name="LAST_COMMIT_MESSAGE" value="implement initial search API structure with mock responses" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/ingestion-service/src/main/java/org/ulpgc/bd/ingestion/io/HttpDownloader.java</url>
+          <line>25</line>
+          <properties class="org.ulpgc.bd.ingestion.io.HttpDownloader" method="findGutenbergTextURL">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
