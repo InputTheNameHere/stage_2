@@ -1,10 +1,9 @@
 package org.ulpgc.bd.benchmark;
 
-import org.openjdk.jmh.annotations.*;
-import java.nio.charset.StandardCharsets;
 import java.util.List;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
+import org.openjdk.jmh.annotations.*;
 
 /**
  * JMH throughput benchmark for the simple tokenizer in TextUtils.

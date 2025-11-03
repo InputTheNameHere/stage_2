@@ -11,7 +11,49 @@
       <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/stage_2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/stage_2.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/control-service/src/main/java/org/ulpgc/service/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/benchmarks/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/benchmarks/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/benchmarks/src/main/java/org/ulpgc/bd/benchmark/IntegrationLoadTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/benchmarks/src/main/java/org/ulpgc/bd/benchmark/IntegrationLoadTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/benchmarks/src/main/java/org/ulpgc/bd/benchmark/InvertedIndexBench.java" beforeDir="false" afterPath="$PROJECT_DIR$/benchmarks/src/main/java/org/ulpgc/bd/benchmark/InvertedIndexBench.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/benchmarks/src/main/java/org/ulpgc/bd/benchmark/MetadataParsingBench.java" beforeDir="false" afterPath="$PROJECT_DIR$/benchmarks/src/main/java/org/ulpgc/bd/benchmark/MetadataParsingBench.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/benchmarks/src/main/java/org/ulpgc/bd/benchmark/TokenizationBench.java" beforeDir="false" afterPath="$PROJECT_DIR$/benchmarks/src/main/java/org/ulpgc/bd/benchmark/TokenizationBench.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/benchmarks/target/classes/org/ulpgc/bd/benchmark/IntegrationLoadTest$Summary.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/benchmarks/target/classes/org/ulpgc/bd/benchmark/IntegrationLoadTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/benchmarks/target/classes/org/ulpgc/bd/benchmark/InvertedIndexBench$Docs.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/benchmarks/target/classes/org/ulpgc/bd/benchmark/InvertedIndexBench.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/benchmarks/target/classes/org/ulpgc/bd/benchmark/MetadataParsingBench$Headers.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/benchmarks/target/classes/org/ulpgc/bd/benchmark/MetadataParsingBench.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/benchmarks/target/classes/org/ulpgc/bd/benchmark/SmokeServer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/benchmarks/target/classes/org/ulpgc/bd/benchmark/TextUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/benchmarks/target/classes/org/ulpgc/bd/benchmark/TokenizationBench$Data.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/benchmarks/target/classes/org/ulpgc/bd/benchmark/TokenizationBench.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/control-service/target/classes/org/ulpgc/bd/control/ControlService.class" beforeDir="false" afterPath="$PROJECT_DIR$/control-service/target/classes/org/ulpgc/bd/control/ControlService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/indexing-service/target/classes/org/ulpgc/bd/IndexingServiceApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/indexing-service/target/classes/org/ulpgc/bd/IndexingServiceApp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/indexing-service/target/classes/org/ulpgc/bd/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/indexing-service/target/classes/org/ulpgc/bd/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/indexing-service/target/classes/org/ulpgc/bd/indexing/IndexingServiceApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/indexing-service/target/classes/org/ulpgc/bd/indexing/IndexingServiceApp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/indexing-service/target/classes/org/ulpgc/bd/indexing/api/IndexingHttpApi.class" beforeDir="false" afterPath="$PROJECT_DIR$/indexing-service/target/classes/org/ulpgc/bd/indexing/api/IndexingHttpApi.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/indexing-service/target/classes/org/ulpgc/bd/indexing/model/DocMeta.class" beforeDir="false" afterPath="$PROJECT_DIR$/indexing-service/target/classes/org/ulpgc/bd/indexing/model/DocMeta.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/indexing-service/target/classes/org/ulpgc/bd/indexing/model/IndexStatus.class" beforeDir="false" afterPath="$PROJECT_DIR$/indexing-service/target/classes/org/ulpgc/bd/indexing/model/IndexStatus.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/indexing-service/target/classes/org/ulpgc/bd/indexing/service/IndexingService.class" beforeDir="false" afterPath="$PROJECT_DIR$/indexing-service/target/classes/org/ulpgc/bd/indexing/service/IndexingService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/indexing-service/target/classes/org/ulpgc/bd/indexing/util/TextUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/indexing-service/target/classes/org/ulpgc/bd/indexing/util/TextUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ingestion-service/target/classes/org/ulpgc/bd/IngestionServiceApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/ingestion-service/target/classes/org/ulpgc/bd/IngestionServiceApp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ingestion-service/target/classes/org/ulpgc/bd/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/ingestion-service/target/classes/org/ulpgc/bd/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ingestion-service/target/classes/org/ulpgc/bd/ingestion/IngestionServiceApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/ingestion-service/target/classes/org/ulpgc/bd/ingestion/IngestionServiceApp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ingestion-service/target/classes/org/ulpgc/bd/ingestion/api/IngestionHttpApi.class" beforeDir="false" afterPath="$PROJECT_DIR$/ingestion-service/target/classes/org/ulpgc/bd/ingestion/api/IngestionHttpApi.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ingestion-service/target/classes/org/ulpgc/bd/ingestion/io/HttpDownloader$FetchResult.class" beforeDir="false" afterPath="$PROJECT_DIR$/ingestion-service/target/classes/org/ulpgc/bd/ingestion/io/HttpDownloader$FetchResult.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ingestion-service/target/classes/org/ulpgc/bd/ingestion/io/HttpDownloader$Probe.class" beforeDir="false" afterPath="$PROJECT_DIR$/ingestion-service/target/classes/org/ulpgc/bd/ingestion/io/HttpDownloader$Probe.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ingestion-service/target/classes/org/ulpgc/bd/ingestion/io/HttpDownloader.class" beforeDir="false" afterPath="$PROJECT_DIR$/ingestion-service/target/classes/org/ulpgc/bd/ingestion/io/HttpDownloader.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ingestion-service/target/classes/org/ulpgc/bd/ingestion/model/Meta.class" beforeDir="false" afterPath="$PROJECT_DIR$/ingestion-service/target/classes/org/ulpgc/bd/ingestion/model/Meta.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ingestion-service/target/classes/org/ulpgc/bd/ingestion/parser/GutenbergMetaExtractor.class" beforeDir="false" afterPath="$PROJECT_DIR$/ingestion-service/target/classes/org/ulpgc/bd/ingestion/parser/GutenbergMetaExtractor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ingestion-service/target/classes/org/ulpgc/bd/ingestion/parser/GutenbergSplitter$Markers.class" beforeDir="false" afterPath="$PROJECT_DIR$/ingestion-service/target/classes/org/ulpgc/bd/ingestion/parser/GutenbergSplitter$Markers.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ingestion-service/target/classes/org/ulpgc/bd/ingestion/parser/GutenbergSplitter$Match.class" beforeDir="false" afterPath="$PROJECT_DIR$/ingestion-service/target/classes/org/ulpgc/bd/ingestion/parser/GutenbergSplitter$Match.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ingestion-service/target/classes/org/ulpgc/bd/ingestion/parser/GutenbergSplitter.class" beforeDir="false" afterPath="$PROJECT_DIR$/ingestion-service/target/classes/org/ulpgc/bd/ingestion/parser/GutenbergSplitter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ingestion-service/target/classes/org/ulpgc/bd/ingestion/service/IngestionService.class" beforeDir="false" afterPath="$PROJECT_DIR$/ingestion-service/target/classes/org/ulpgc/bd/ingestion/service/IngestionService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ingestion-service/target/classes/org/ulpgc/bd/test_requests.http" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/search-service/target/classes/org/ulpgc/bd/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/search-service/target/classes/org/ulpgc/bd/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/search-service/target/classes/org/ulpgc/bd/search/SearchServiceApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/search-service/target/classes/org/ulpgc/bd/search/SearchServiceApp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/search-service/target/classes/org/ulpgc/bd/search/api/SearchHttpApi.class" beforeDir="false" afterPath="$PROJECT_DIR$/search-service/target/classes/org/ulpgc/bd/search/api/SearchHttpApi.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/search-service/target/classes/org/ulpgc/bd/search/model/SearchResult.class" beforeDir="false" afterPath="$PROJECT_DIR$/search-service/target/classes/org/ulpgc/bd/search/model/SearchResult.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/search-service/target/classes/org/ulpgc/bd/search/service/SearchService.class" beforeDir="false" afterPath="$PROJECT_DIR$/search-service/target/classes/org/ulpgc/bd/search/service/SearchService.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,6 +70,21 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "Antje53"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/InputTheNameHere/stage_2.git",
+    "accountId": "4f3e4bf7-180b-4be4-a5ff-f5d5f7678fe1"
+  }
+}]]></component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 4
@@ -37,28 +94,34 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.ControlService.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Indexing.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Ingestion.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Search.executor&quot;: &quot;Run&quot;,
-    &quot;Maven.control-service [package].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.indexing-service [package].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.ingestion-service [package].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.search-service [package].executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;develop&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.ControlService.executor": "Run",
+    "Application.Indexing.executor": "Run",
+    "Application.Ingestion.executor": "Run",
+    "Application.IntegrationLoadTest.executor": "Run",
+    "Application.Search.executor": "Run",
+    "Maven.benchmarks [package].executor": "Run",
+    "Maven.control-service [package].executor": "Run",
+    "Maven.indexing-service [package].executor": "Run",
+    "Maven.ingestion-service [package].executor": "Run",
+    "Maven.search-service [package].executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "feature/benchmarks",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "MavenSettings",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="Indexing" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="org.ulpgc.bd.indexing.IndexingServiceApp" />

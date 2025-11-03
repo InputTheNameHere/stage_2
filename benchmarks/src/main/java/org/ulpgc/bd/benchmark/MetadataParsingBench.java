@@ -1,7 +1,6 @@
 package org.ulpgc.bd.benchmark;
 
 import org.openjdk.jmh.annotations.*;
-
 import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;

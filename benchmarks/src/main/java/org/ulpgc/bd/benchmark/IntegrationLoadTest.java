@@ -1,6 +1,5 @@
 package org.ulpgc.bd.benchmark;
 
-import com.google.gson.Gson;
 import java.util.function.Supplier;
 import java.io.BufferedWriter;
 import java.io.IOException;
@@ -10,7 +9,6 @@ import java.net.http.*;
 import java.time.Duration;
 import java.util.*;
 import java.util.concurrent.*;
-import java.util.stream.DoubleStream;
 
 /**
  * Simple end-to-end load test runner for three endpoints:

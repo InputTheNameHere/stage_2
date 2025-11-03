@@ -1,7 +1,6 @@
 package org.ulpgc.bd.benchmark;
 
 import org.openjdk.jmh.annotations.*;
-
 import java.util.*;
 import java.util.concurrent.TimeUnit;
 
