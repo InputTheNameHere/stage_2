@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="afc3a655-f9fb-40fe-89b1-bf6d48c3eeee" name="Changes" comment="implement initial search API structure with mock responses">
-      <change afterPath="$PROJECT_DIR$/control-service/src/main/java/org/ulpgc/bd/control/ControlService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/control-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/control-service/pom.xml" afterDir="false" />
-    </list>
+    <list default="true" id="afc3a655-f9fb-40fe-89b1-bf6d48c3eeee" name="Changes" comment="merge control" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -46,7 +40,7 @@
     "Maven.ingestion-service [package].executor": "Run",
     "Maven.search-service [package].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "feature/control",
+    "git-widget-placeholder": "develop",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "node.js.detected.package.eslint": "true",
@@ -123,7 +117,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="develop" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -131,7 +137,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="implement initial search API structure with mock responses" />
-    <option name="LAST_COMMIT_MESSAGE" value="implement initial search API structure with mock responses" />
+    <MESSAGE value="merge control" />
+    <option name="LAST_COMMIT_MESSAGE" value="merge control" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -139,7 +146,7 @@
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/ingestion-service/src/main/java/org/ulpgc/bd/ingestion/io/HttpDownloader.java</url>
           <line>25</line>
-          <properties class="org.ulpgc.bd.ingestion.io.HttpDownloader" method="findGutenbergTextURL">
+          <properties class="org.ulpgc.bd.ingestion.io.HttpDownloader">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
           </properties>
