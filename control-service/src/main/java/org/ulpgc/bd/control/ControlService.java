@@ -11,7 +11,7 @@ public class ControlService {
     private static final Gson gson = new Gson();
 
     public static void main(String[] args) {
-        Javalin app = Javalin.create().start(7003);
+        Javalin app = Javalin.create().start(7000);
 
         app.get("/status", ctx -> ctx.json(Map.of("service", "control", "status", "running")));
 
