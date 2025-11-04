@@ -9,13 +9,14 @@
         <outputRelativeToContentRoot value="true" />
         <module name="control-service" />
         <module name="indexing-service" />
+        <module name="benchmarks" />
         <module name="benchmarking" />
         <module name="ingestion-service" />
         <module name="search-service" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="benchmarks" target="21" />
+      <module name="benchmarking" target="17" />
     </bytecodeTargetLevel>
   </component>
 </project>

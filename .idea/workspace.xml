@@ -4,12 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="afc3a655-f9fb-40fe-89b1-bf6d48c3eeee" name="Changes" comment="merged feature">
+    <list default="true" id="afc3a655-f9fb-40fe-89b1-bf6d48c3eeee" name="Changes" comment="modified benchmark output">
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/stage_2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/stage_2.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/indexing-service/src/main/java/org/ulpgc/bd/IndexingServiceApp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/indexing-service/target/classes/org/ulpgc/bd/IndexingServiceApp.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ingestion-service/src/main/java/org/ulpgc/bd/IngestionServiceApp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ingestion-service/target/classes/org/ulpgc/bd/IngestionServiceApp.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,16 +32,16 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "Antje53"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Antje53&quot;
   }
-}]]></component>
+}</component>
   <component name="GithubPullRequestsUISettings"><![CDATA[{
   "selectedUrlAndAccountId": {
     "url": "https://github.com/InputTheNameHere/stage_2.git",
-    "accountId": "4f3e4bf7-180b-4be4-a5ff-f5d5f7678fe1"
+    "accountId": "8b61521f-fae2-46b9-8d8e-23f21bcd5d10"
   }
 }]]></component>
   <component name="ProjectColorInfo">{
@@ -69,7 +70,8 @@
     "Maven.search-service [package].executor": "Run",
     "Python.plot_benchmark_results.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "feature/benchmarks__2",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "develop",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "node.js.detected.package.eslint": "true",
@@ -84,7 +86,7 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Indexing">
     <configuration name="Indexing" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="org.ulpgc.bd.indexing.IndexingServiceApp" />
       <module name="indexing-service" />
@@ -128,8 +130,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-b114ca120d71-intellij.indexing.shared.core-IU-242.21829.142" />
-        <option value="bundled-js-predefined-d6986cc7102b-7c0b70fcd90d-JavaScript-IU-242.21829.142" />
+        <option value="bundled-jdk-9823dce3aa75-fbdcb00ec9e3-intellij.indexing.shared.core-IU-251.23774.435" />
+        <option value="bundled-js-predefined-d6986cc7102b-f27c65a3e318-JavaScript-IU-251.23774.435" />
       </set>
     </attachedChunks>
   </component>
@@ -144,6 +146,7 @@
       <workItem from="1761484979111" duration="8758000" />
       <workItem from="1761736553848" duration="4636000" />
       <workItem from="1762274176222" duration="956000" />
+      <workItem from="1762290905607" duration="1105000" />
     </task>
     <task id="LOCAL-00001" summary="implement initial search API structure with mock responses">
       <option name="closed" value="true" />
@@ -201,7 +204,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/ingestion-service/src/main/java/org/ulpgc/bd/ingestion/io/HttpDownloader.java</url>
-          <line>25</line>
+          <line>54</line>
           <properties class="org.ulpgc.bd.ingestion.io.HttpDownloader">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
