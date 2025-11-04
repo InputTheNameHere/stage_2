@@ -1,5 +1,6 @@
 package org.ulpgc.bd;
 
+import java.io.File;
 import java.io.FileWriter;
 import com.opencsv.CSVWriter;
 
@@ -7,7 +8,8 @@ public class UnifiedBenchmark {
 
     public static void main(String[] args) throws Exception {
         int[] threads = {1, 2, 4, 8};
-        String output = "results/metrics.csv";
+        String output = System.getProperty("user.dir") + "/benchmarks/results/metrics.csv";
+        new File(System.getProperty("user.dir") + "/benchmarks/results").mkdirs();
 
         try (CSVWriter writer = new CSVWriter(new FileWriter(output))) {
             writer.writeNext(new String[]{"threads", "throughput", "latency_avg", "latency_p95", "cpu", "mem_mb"});
