@@ -2,8 +2,8 @@ import os
 import pandas as pd
 import matplotlib.pyplot as plt
 
-CSV = "benchmarking/results/metrics.csv"
-OUT = "benchmarking/results/plots"
+CSV = "benchmarks/results/metrics.csv"
+OUT = "benchmarks/results/plots"
 os.makedirs(OUT, exist_ok=True)
 
 df = pd.read_csv(CSV)
@@ -42,24 +42,28 @@ plt.grid(True, alpha=0.3)
 plt.savefig(os.path.join(OUT, "3_cpu_usage.png"), dpi=160)
 
 # Memory usage
+TOTAL_MEMORY_MB = 32768  # 32 GB reference server
+df["mem_pct"] = (df["mem_mb"] / TOTAL_MEMORY_MB) * 100
+
 plt.figure()
-plt.plot(df["threads"], df["mem_mb"], marker="o", color="tab:green")
+plt.plot(df["threads"], df["mem_pct"], marker="o", color="tab:green")
 plt.xlabel("Threads")
-plt.ylabel("Memory Usage (MB)")
+plt.ylabel("Memory Usage (%) of 32 GB")
 plt.title("4. Memory Utilization vs Concurrency")
 plt.grid(True, alpha=0.3)
-plt.savefig(os.path.join(OUT, "4_memory_usage.png"), dpi=160)
+plt.savefig(os.path.join(OUT, "4_memory_usage_pct.png"), dpi=160)
+
 
 # Scalability efficiency
 base = index_df[index_df["threads"] == 1]["throughput"].values[0]
-max_threads = index_df["threads"].max()
-last = index_df[index_df["threads"] == max_threads]["throughput"].values[0]
-eff = (last / base) / max_threads * 100
+index_df["efficiency"] = (index_df["throughput"] / (base * index_df["threads"])) * 100
+
 plt.figure()
-plt.bar(["Scaling efficiency"], [eff], color="cornflowerblue")
-plt.ylim(0, 100)
-plt.title(f"5. Scalability Efficiency = {eff:.1f}%")
+plt.plot(index_df["threads"], index_df["efficiency"], marker="o", color="cornflowerblue")
+plt.xlabel("Threads")
 plt.ylabel("Efficiency (%)")
-plt.savefig(os.path.join(OUT, "5_scalability_efficiency.png"), dpi=160)
+plt.title("5. Scalability Efficiency per Concurrency Level")
+plt.grid(True, alpha=0.3)
+plt.savefig(os.path.join(OUT, "5_scalability_efficiency_per_level.png"), dpi=160)
 
 print(f"5 plots saved in {OUT}")

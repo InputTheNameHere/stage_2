@@ -16,10 +16,10 @@ public class UnifiedBenchmark {
     // Adjust URLs to your running microservices
     private static final String INDEX_URL  = "http://localhost:7002/index/update/1234";
     private static final String SEARCH_URL = "http://localhost:7003/search?q=data";
-    private static final String OUT = "benchmarking/results/metrics.csv";
+    private static final String OUT = "benchmarks/results/metrics.csv";
 
     public static void main(String[] args) throws Exception {
-        new File("benchmarking/results").mkdirs();
+        new File("benchmarks/results").mkdirs();
         try (PrintWriter pw = new PrintWriter(new FileWriter(OUT))) {
             pw.println("endpoint,threads,throughput,avg_ms,p50_ms,p95_ms,max_ms,cpu_pct,mem_mb");
         }

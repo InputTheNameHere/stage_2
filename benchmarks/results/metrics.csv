@@ -1,0 +1,9 @@
+endpoint,threads,throughput,avg_ms,p50_ms,p95_ms,max_ms,cpu_pct,mem_mb
+POST /index/update/{id},1,97.087,9.420,5,7,208,6.63,13491
+GET /search,1,185.874,4.840,5,7,8,6.63,13498
+POST /index/update/{id},2,431.034,4.020,4,5,7,16.15,13509
+GET /search,2,404.858,4.170,4,6,18,16.15,13506
+POST /index/update/{id},4,809.717,4.290,4,5,7,29.09,13507
+GET /search,4,873.362,3.930,4,5,6,29.09,13508
+POST /index/update/{id},8,1418.440,4.943,4,7,23,45.32,13512
+GET /search,8,1666.667,4.095,4,6,7,45.32,13515
