@@ -166,7 +166,8 @@ The **Java Microbenchmark Harness (JMH)** framework is used to measure:
    ```bash
    mvn clean package
 2. **Run the benchmarks:**
-  java -jar target/benchmarks.jar -rf csv
+   ```bash
+   java -jar target/benchmarks.jar -rf csv
 ### Output and Results
 
 Benchmark results are automatically saved in the directory:
@@ -181,6 +182,4 @@ Benchmark results are automatically saved in the directory:
 * Martyna Chmielińska 
 * Angela López Dorta
 * Pablo Mendoza Rodriguez
-
-```
 
