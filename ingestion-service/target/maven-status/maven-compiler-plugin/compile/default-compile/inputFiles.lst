@@ -1,0 +1,7 @@
+C:\Users\leono\OneDrive\Desktop\UNI\Tercero\sem1\BD\stage_2\ingestion-service\src\main\java\org\ulpgc\bd\ingestion\api\IngestionHttpApi.java
+C:\Users\leono\OneDrive\Desktop\UNI\Tercero\sem1\BD\stage_2\ingestion-service\src\main\java\org\ulpgc\bd\ingestion\IngestionServiceApp.java
+C:\Users\leono\OneDrive\Desktop\UNI\Tercero\sem1\BD\stage_2\ingestion-service\src\main\java\org\ulpgc\bd\ingestion\io\HttpDownloader.java
+C:\Users\leono\OneDrive\Desktop\UNI\Tercero\sem1\BD\stage_2\ingestion-service\src\main\java\org\ulpgc\bd\ingestion\service\IngestionService.java
+C:\Users\leono\OneDrive\Desktop\UNI\Tercero\sem1\BD\stage_2\ingestion-service\src\main\java\org\ulpgc\bd\ingestion\model\Meta.java
+C:\Users\leono\OneDrive\Desktop\UNI\Tercero\sem1\BD\stage_2\ingestion-service\src\main\java\org\ulpgc\bd\ingestion\parser\GutenbergMetaExtractor.java
+C:\Users\leono\OneDrive\Desktop\UNI\Tercero\sem1\BD\stage_2\ingestion-service\src\main\java\org\ulpgc\bd\ingestion\parser\GutenbergSplitter.java

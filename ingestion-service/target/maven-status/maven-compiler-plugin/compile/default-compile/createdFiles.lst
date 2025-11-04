@@ -1,0 +1,11 @@
+org\ulpgc\bd\ingestion\parser\GutenbergSplitter.class
+org\ulpgc\bd\ingestion\service\IngestionService.class
+org\ulpgc\bd\ingestion\io\HttpDownloader$FetchResult.class
+org\ulpgc\bd\ingestion\io\HttpDownloader$Probe.class
+org\ulpgc\bd\ingestion\model\Meta.class
+org\ulpgc\bd\ingestion\IngestionServiceApp.class
+org\ulpgc\bd\ingestion\parser\GutenbergSplitter$Match.class
+org\ulpgc\bd\ingestion\api\IngestionHttpApi.class
+org\ulpgc\bd\ingestion\parser\GutenbergMetaExtractor.class
+org\ulpgc\bd\ingestion\parser\GutenbergSplitter$Markers.class
+org\ulpgc\bd\ingestion\io\HttpDownloader.class

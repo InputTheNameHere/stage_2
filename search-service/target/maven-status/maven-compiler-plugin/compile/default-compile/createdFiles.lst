@@ -1,0 +1,4 @@
+org\ulpgc\bd\search\model\SearchResult.class
+org\ulpgc\bd\search\api\SearchHttpApi.class
+org\ulpgc\bd\search\service\SearchService.class
+org\ulpgc\bd\search\SearchServiceApp.class
