@@ -120,20 +120,6 @@ STAGE_2/
    cd control-service
    mvn exec:java "-Dexec.mainClass=org.ulpgc.bd.control.ControlServiceApp"
 
----
-
-## Technologies Used
-
-| Technology | Purpose |
-|-------------|----------|
-| **Java 17** | Core programming language |
-| **Maven** | Dependency management and build automation |
-| **Javalin 6.1.3** | Lightweight REST framework |
-| **Gson 2.11.0** | JSON serialization and deserialization |
-| **SLF4J Simple 2.0.9** | Logging system |
-| **JMH** | Java Microbenchmark Harness for performance evaluation |
-
----
 
 | Service  | Port | Health Endpoint              |
 |-----------|------|------------------------------|
@@ -169,24 +155,6 @@ Coordinates the full workflow:
 ## Benchmarking
 
 The **Java Microbenchmark Harness (JMH)** framework is used to measure:
-- Text tokenization and normalization performance.
-- Metadata extraction and index updates.
-- Query latency and ranking efficiency.
-
-### Example execution:
-```bash
-mvn clean package
-java -jar target/benchmarks.jar -rf csv
-```
-## Benchmarking
-
-The **Java Microbenchmark Harness (JMH)** framework is used to measure the computational performance of critical components in each microservice.  
-JMH ensures accurate results by managing JVM warm-up, JIT compilation, and garbage collection effects.
-
-### Benchmark Scope
-
-The benchmarks focus on:
-
 - Text tokenization and normalization performance  
 - Metadata extraction and index update efficiency  
 - Query latency and ranking operations  
