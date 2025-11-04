@@ -1,0 +1,13 @@
+"Benchmark","Mode","Threads","Samples","Score","Score Error (99.9%)","Unit","Param: avgWords","Param: docs","Param: textSize"
+"com.example.benchmark.MetadataParsingBench.parse_header","thrpt",1,10,747.732499,103.867723,"ops/ms",,,
+"com.example.benchmark.TokenizationBench.tokenize_simple","thrpt",1,10,32.601582,2.819294,"ops/ms",,,1000
+"com.example.benchmark.TokenizationBench.tokenize_simple","thrpt",1,10,3.418532,0.492991,"ops/ms",,,10000
+"com.example.benchmark.TokenizationBench.tokenize_simple","thrpt",1,10,0.315455,0.023639,"ops/ms",,,100000
+"com.example.benchmark.InvertedIndexBench.build_index","avgt",1,10,0.981115,0.132730,"ms/op",80,500,
+"com.example.benchmark.InvertedIndexBench.build_index","avgt",1,10,3.965760,0.372340,"ms/op",80,2000,
+"com.example.benchmark.InvertedIndexBench.build_index","avgt",1,10,4.823343,0.345851,"ms/op",400,500,
+"com.example.benchmark.InvertedIndexBench.build_index","avgt",1,10,18.043587,1.192339,"ms/op",400,2000,
+"com.example.benchmark.InvertedIndexBench.lookup_topfreq","avgt",1,10,0.729321,0.102723,"ms/op",80,500,
+"com.example.benchmark.InvertedIndexBench.lookup_topfreq","avgt",1,10,3.062630,0.452752,"ms/op",80,2000,
+"com.example.benchmark.InvertedIndexBench.lookup_topfreq","avgt",1,10,3.592332,0.134372,"ms/op",400,500,
+"com.example.benchmark.InvertedIndexBench.lookup_topfreq","avgt",1,10,16.105747,2.681480,"ms/op",400,2000,
