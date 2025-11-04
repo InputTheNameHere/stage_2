@@ -86,6 +86,39 @@ STAGE_2/
    ```bash
    mvn clean package
 
+   # Ingestion Service:
+   cd ingestion-service
+   mvn clean package -DskipTests
+
+   # Indexing Service
+   cd indexing-service
+   mvn clean package -DskipTests
+
+   # Search Service
+   cd search-service
+   mvn clean package -DskipTests
+
+   # Control Service
+   cd control-service
+   mvn clean package -DskipTests
+
+2. **Run Each Service (from Its Own Folder):**
+   ```bash
+   # Ingestion Service:
+   cd ingestion-service
+   mvn exec:java "-Dexec.mainClass=org.ulpgc.bd.ingestion.IngestionServiceApp"
+
+   # Indexing Service
+   cd indexing-service
+   mvn exec:java "-Dexec.mainClass=org.ulpgc.bd.indexing.IndexingServiceApp"
+
+   # Search Service
+   cd search-service
+   mvn exec:java "-Dexec.mainClass=org.ulpgc.bd.search.SearchServiceApp"
+
+   # Control Service
+   cd control-service
+   mvn exec:java "-Dexec.mainClass=org.ulpgc.bd.control.ControlServiceApp"
 
 ---
 
@@ -102,11 +135,6 @@ STAGE_2/
 
 ---
 
-## How to Build and Run
-
-1. **Build each microservice:**
-   ```bash
-   mvn clean package
 | Service  | Port | Health Endpoint              |
 |-----------|------|------------------------------|
 | Ingestion | 7001 | `/ingest/status/{book_id}`   |
