@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="afc3a655-f9fb-40fe-89b1-bf6d48c3eeee" name="Changes" comment="modified benchmark output">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/indexing-service/src/main/java/org/ulpgc/bd/IndexingServiceApp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/indexing-service/target/classes/org/ulpgc/bd/IndexingServiceApp.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ingestion-service/src/main/java/org/ulpgc/bd/IngestionServiceApp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ingestion-service/target/classes/org/ulpgc/bd/IngestionServiceApp.class" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="feature/benchmarks" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Antje53&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/InputTheNameHere/stage_2.git",
+    "accountId": "8b61521f-fae2-46b9-8d8e-23f21bcd5d10"
+  }
+}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 4
+}</component>
+  <component name="ProjectId" id="34baxCo3ALru0xZg0mdgHi8wBxb" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.ControlService.executor": "Run",
+    "Application.Indexing.executor": "Run",
+    "Application.IndexingServiceApp.executor": "Run",
+    "Application.Ingestion.executor": "Run",
+    "Application.IngestionServiceApp.executor": "Run",
+    "Application.Search.executor": "Run",
+    "Application.SearchServiceApp.executor": "Run",
+    "Application.UnifiedBenchmark.executor": "Run",
+    "Maven.benchmarks [package].executor": "Run",
+    "Maven.control-service [package].executor": "Run",
+    "Maven.indexing-service [package].executor": "Run",
+    "Maven.ingestion-service [package].executor": "Run",
+    "Maven.search-service [package].executor": "Run",
+    "Python.plot_benchmark_results.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "develop",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.projectsettings.compiler.javacompiler",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager" selected="Application.Indexing">
+    <configuration name="Indexing" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="org.ulpgc.bd.indexing.IndexingServiceApp" />
+      <module name="indexing-service" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Ingestion" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="org.ulpgc.bd.ingestion.IngestionServiceApp" />
+      <module name="ingestion-service" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Search" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="org.ulpgc.bd.search.SearchServiceApp" />
+      <module name="search-service" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="control-service" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="control-service" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Ingestion" />
+      <item itemvalue="Application.Indexing" />
+      <item itemvalue="Application.Search" />
+    </list>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-fbdcb00ec9e3-intellij.indexing.shared.core-IU-251.23774.435" />
+        <option value="bundled-js-predefined-d6986cc7102b-f27c65a3e318-JavaScript-IU-251.23774.435" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="afc3a655-f9fb-40fe-89b1-bf6d48c3eeee" name="Changes" comment="" />
+      <created>1761484975858</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1761484975858</updated>
+      <workItem from="1761484979111" duration="8758000" />
+      <workItem from="1761736553848" duration="4636000" />
+      <workItem from="1762274176222" duration="956000" />
+      <workItem from="1762290905607" duration="1105000" />
+    </task>
+    <task id="LOCAL-00001" summary="implement initial search API structure with mock responses">
+      <option name="closed" value="true" />
+      <created>1761485680879</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1761485680879</updated>
+    </task>
+    <task id="LOCAL-00002" summary="merged feature">
+      <option name="closed" value="true" />
+      <created>1762170613613</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1762170613613</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="develop" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="implement initial search API structure with mock responses" />
+    <MESSAGE value="merge control" />
+    <MESSAGE value="merged feature" />
+    <option name="LAST_COMMIT_MESSAGE" value="merged feature" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/ingestion-service/src/main/java/org/ulpgc/bd/ingestion/io/HttpDownloader.java</url>
+          <line>54</line>
+          <properties class="org.ulpgc.bd.ingestion.io.HttpDownloader">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/stage_2$plot_benchmark_results.coverage" NAME="plot_benchmark_results Coverage Results" MODIFIED="1762269610523" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/benchmarks" />
+  </component>
+</project>
